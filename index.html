@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Feliz Aniversário</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .card {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .message, .cake {
+            display: none;
+            text-align: center;
+        }
+        .cake img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" onclick="showMessage()">
+    <p>Clique aqui</p>
+    <div class="message">
+        <h2>Lasanha!</h2>
+        <div class="cake">
+            <img src="https://example.com/cake.jpg" alt="Bolo de Chocolate">
+        </div>
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        const card = document.querySelector('.card');
+        const message = document.querySelector('.message');
+        card.querySelector('p').style.display = 'none';
+        message.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
